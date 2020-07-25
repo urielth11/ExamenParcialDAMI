@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ConnectionRest {
     private static Retrofit retrofit = null;
-    private static final String RUTA_API_REST ="http://env-0714649.j.layershift.co.uk/rest/servicios/";
+    private static final String RUTA_API_REST ="http://env-9035382.j.layershift.co.uk/rest/servicios/";
 
 
     //Permite Conectarnos al API Rest

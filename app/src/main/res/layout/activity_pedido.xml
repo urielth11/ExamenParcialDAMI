@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PedidoActivity">
+
+    <LinearLayout
+        android:layout_width="354dp"
+        android:layout_height="800dp"
+        android:orientation="vertical"
+        android:paddingTop="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edtFechaEntrega"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de entrega"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/edtLugarEntrega"
+            android:layout_width="match_parent"
+            android:hint="Lugar de entrega"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spnEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/array_estado"
+            android:layout_marginTop="0dp"/>
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Departamentos"
+            android:layout_marginTop="0dp"/>
+
+        <Spinner
+            android:id="@+id/spnDepartamentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="5sp"
+            android:layout_marginTop="0dp"/>
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Provincias"
+            android:layout_marginTop="0dp"/>
+
+        <Spinner
+            android:id="@+id/spnProvincias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="5sp"
+            android:layout_marginTop="0dp"/>
+
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Distritos"
+            android:layout_marginTop="0dp"/>
+
+        <Spinner
+            android:id="@+id/spnDistritos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="5sp"
+            android:layout_marginTop="0dp"/>
+
+        <TextView
+            android:id="@+id/txtClientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clientes"
+            android:layout_marginTop="0dp"/>
+
+        <Spinner
+            android:id="@+id/spnClientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="5sp"
+            android:layout_marginTop="0dp"/>
+
+        <TextView
+            android:id="@+id/txtProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Productos"
+            android:layout_marginTop="0dp"/>
+
+        <Spinner
+            android:id="@+id/spnProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="5sp"
+            android:layout_marginTop="0dp"/>
+
+        <EditText
+            android:id="@+id/edtCantidad"
+            android:layout_width="match_parent"
+            android:hint="Cantidad"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="#32CD32"
+            android:text="@string/btn_guardar"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

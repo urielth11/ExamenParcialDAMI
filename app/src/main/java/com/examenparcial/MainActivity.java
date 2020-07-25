@@ -10,8 +10,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.examenparcial.adaptador.MarcaAdapter;
-import com.examenparcial.entidad.Marca;
+import com.examenparcial.adaptador.PedidoAdapter;
+import com.examenparcial.entidad.Pedido;
 import com.examenparcial.servicio.ServicioRest;
 import com.examenparcial.util.ConnectionRest;
 
@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
     Button btnAdd;
     Button btnLista;
     ListView listView;
-    MarcaAdapter adaptadorListView;
+    PedidoAdapter adaptadorListView;
     ServicioRest servicio;
-    List<Marca> list = new ArrayList<Marca>();
+    List<Pedido> list = new ArrayList<Pedido>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mensaje("Se pulsó el agregar");
-                Intent intent = new Intent(MainActivity.this, MarcaActivity.class);
+                Intent intent = new Intent(MainActivity.this, PedidoActivity.class);
                 intent.putExtra("var_metodo", "REGISTRAR");
                 startActivity(intent);
             }
@@ -71,21 +71,21 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void listData(){
-        Call<List<Marca>> call = servicio.listaMarca();
-        call.enqueue(new Callback<List<Marca>>() {
+        Call<List<Pedido>> call = servicio.listaPedido();
+        call.enqueue(new Callback<List<Pedido>>() {
             @Override
-            public void onResponse(Call<List<Marca>> call, Response<List<Marca>> response) {
+            public void onResponse(Call<List<Pedido>> call, Response<List<Pedido>> response) {
                 if(response.isSuccessful()){
                     //Aqui es donde obtiene la data y se coloca en el list
                     mensaje("Listado exitoso");
                     list = response.body();
-                    adaptadorListView = new MarcaAdapter(MainActivity.this, R.layout.activity_list, list);
+                    adaptadorListView = new PedidoAdapter(MainActivity.this, R.layout.activity_list, list);
                     listView.setAdapter(adaptadorListView);
                 }
             }
 
             @Override
-            public void onFailure(Call<List<Marca>> call, Throwable t) {
+            public void onFailure(Call<List<Pedido>> call, Throwable t) {
                 Log.e("ERROR: ", t.getMessage());
             }
         });

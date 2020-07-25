@@ -1,21 +1,31 @@
 <resources>
-<string name="app_name">ExamenParcial</string>
+    <string name="app_name">ExamenParcial</string>
 
-<string name="btn_registra">Registra</string>
-<string name="btn_actualiza">Actualiza</string>
-<string name="btn_elimina">Elimina</string>
-<string name="btn_lista">Lista</string>
-<string name="btn_guardar">Guardar</string>
+    <string name="btn_registra">Registra</string>
+    <string name="btn_actualiza">Actualiza</string>
+    <string name="btn_elimina">Elimina</string>
+    <string name="btn_lista">Lista</string>
+    <string name="btn_guardar">Guardar</string>
 
-<string name="lbl_id">ID</string>
-<string name="lbl_nombre">Nombre</string>
-<string name="lbl_estado">Estado</string>
+    <string name="lbl_id">ID</string>
+    <string name="lbl_nombre">Nombre</string>
+    <string name="lbl_estado">Estado</string>
 
-<string-array name="array_estado">
-    <item>[Seleccione]</item>
-    <item>ACTIVO</item>
-    <item>INACTIVO</item>
-</string-array>
+
+    <string name="lbl_registro">Fecha Registro</string>
+    <string name="lbl_entrega">Fecha Entrega</string>
+    <string name="lbl_lugar">Lugar</string>
+
+    <string name="lbl_departamento">Departamento</string>
+    <string name="lbl_distrito">Distrito</string>
+    <string name="lbl_provincia">Provincia</string>
+
+    <string name="lbl_cliente">Cliente</string>
+
+    <string-array name="array_estado">
+        <item>[Seleccione Estado]</item>
+        <item>PENDIENTE</item>
+    </string-array>
 
 
 </resources>
